@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+body {
+    font-family:"Google Sans Flex"
+}
+
+.App {
+    margin-left:25px;
+}
+
+.nav * {
+    padding:0;
+    margin:0;
+}
+
+.nav-title {
+    display:flex;
+    gap:25px;
+    align-items: baseline;
+}
+
+.nav {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:10px;
+    padding-right:25px;
+}
+
+
+.summarycontainer {
+    display:flex;
+    gap:50px;
+    margin-right:25px;
+    align-items:start;
+}
+
+.activity-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex:1
+}
+
+
+.activity-item {
+    background: #ffffff;
+    border-radius: 0px;
+    padding: 10px 10px;
+
+    border: 1px solid #e5e7eb;
+    border-left: 5px solid;
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.15s ease;
+}
+
+
+.activity-item:hover {
+    transform: translateY(-1px);
+}
+
+
+.activity-item.buy {
+    border-left-color: #16a34a;
+}
+
+
+.activity-item.sell {
+    border-left-color: #dc2626;
+}
+
+
+.activity-message {
+    font-size: 12px;
+    font-weight: 500;
+    color: #111827;
+}
+
+
+.action {
+    font-weight: 700;
+}
+
+
+.buy .action {
+    color: #16a34a;
+}
+
+
+.sell .action {
+    color: #dc2626;
+}
+
+
+.ticker {
+    font-weight: 700;
+    color: #111827;
+}
+
+
+.price {
+    font-weight: 600;
+    color: #374151;
+}
+
+
+.activity-meta {
+    margin-top: 8px;
+
+    font-size: 10px;
+    color: #6b7280;
+}
+
+
+.activity-error {
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background: #fef2f2;
+    color: #dc2626;
+
+    border: 1px solid #fecaca;
+}
+
+.trader {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin: 24px 0;
+    background: #ffffff;
+    border-radius: 0px;
+    padding: 10px 10px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.15s ease;
+    padding:10px;
+    margin-right:25px;
+}
+
+.trader input {
+    width: 180px;
+    padding: 10px 14px;
+    font-size: 16px;
+
+    border: 1px solid #d1d5db;
+
+    outline: none;
+}
+
+.trader input:focus {
+    border-color: #16a34a;
+}
+
+.trader button {
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 0px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: opacity 0.2s;
+}
+
+.trader button:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+.trader button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.buy-button {
+    background: #16a34a;
+    color: white;
+}
+
+.sell-button {
+    background: #dc2626;
+    color: white;
+}
+
+
+.portfolio-overview {
+    flex:2;
+    display: flex;
+    flex-direction:row;
+    gap: 25px;
+    justify-content:left;
+}
+
+.holdings {
+    flex:1;
+    background: #ffffff;
+    border-radius: 0px;
+    padding: 10px 10px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.15s ease;
+    padding:10px;
+}
+
+.holdings h2 {
+    margin: 0 0 16px;
+    font-size: 22px;
+    color: #111827;
+}
+
+.holding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #f3f4f6;
+
+    font-size: 16px;
+}
+
+.holding:last-child {
+    border-bottom: none;
+}
+
+.cash {
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.portfolio-pie h2 {
+    margin:0;
+    padding:0;
+}
+
+.portfolio-pie {
+    flex:2;
+    background: #ffffff;
+    border-radius: 0px;
+    padding: 10px 10px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.15s ease;
+    padding:10px;
+}
+
+.app-info-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+
+.info-button {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.app-info-popup {
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 420px;
+
+    background: white;
+
+    padding: 24px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+
+    z-index: 1000;
+
+    color: #111827;
+}
+
+
+.app-info-popup h3 {
+
+    margin-top: 0;
+
+    font-size: 22px;
+    margin-bottom:10px;
+
+}
+
+
+.app-info-popup p {
+
+    line-height: 1.5;
+
+    color: #4b5563;
+
+}
