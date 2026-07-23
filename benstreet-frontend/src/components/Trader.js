@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SERVER_URL_BASE } from '../lib/config';
 
 const Trader = () => {
 
@@ -19,7 +20,7 @@ const Trader = () => {
         try {
 
             const response = await fetch(
-                `http://localhost:3001/api/${side}?ticker=${symbol}`,
+                `${SERVER_URL_BASE}/api/${side}?ticker=${symbol}`,
                 {
                     method: "POST",
                 }

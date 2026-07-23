@@ -14,8 +14,12 @@ app = FastAPI(
     version="1.0.0"
 )
 
-BASE_URL = "https://localhost:5000/v1/api"
+# edit these
+BASE_URL = "https://localhost:5000/v1/api" # client gateway api
+FRONTEND_URL = "http://localhost:3000"
 ACCOUNT_ID = os.getenv("ACCOUNT_ID")
+
+
 session = requests.Session()
 session.verify = False
 
@@ -61,7 +65,7 @@ def market_is_open():
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000"
+        FRONTEND_URL
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -386,8 +390,7 @@ def get_activity():
         # pending orders
         for order in pending_orders:
 
-            # if order.get("status") != "submitted":
-            if False:
+            if order.get("status") == "Filled":
                 continue
 
             activity.append({

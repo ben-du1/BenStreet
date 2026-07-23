@@ -22,15 +22,11 @@ function AppInfo() {
                     <h3>About This App</h3>
 
                     <p>
-                        This application allows users to interact with
-                        a live investment portfolio through a web interface.
-                        Users can place $1 buy and sell orders, view current
-                        holdings, monitor portfolio allocation, and track
-                        executed trades.
+                        Yes, this is actually my money. That's why you can only trade in dollar amounts. Note that buy orders cannot be placed outside of regular market hours.
                     </p>
-
+                    <br />
                     <p>
-                        Trades are routed through Interactive Brokers and
+                        Trades are routed through my Interactive Brokers account and
                         portfolio data is updated dynamically from the
                         brokerage account.
                     </p>

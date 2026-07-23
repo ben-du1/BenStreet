@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import PortfolioPie from './PortfolioPie';
 import {useEffect,useState} from 'react'
+import { SERVER_URL_BASE } from '../lib/config';
 
 function Summary() {
 
@@ -16,7 +17,7 @@ function Summary() {
             try {
 
                 const response = await fetch(
-                    "http://localhost:3001/api/portfolio"
+                    `${SERVER_URL_BASE}/api/portfolio`
                 );
 
                 if (!response.ok) {

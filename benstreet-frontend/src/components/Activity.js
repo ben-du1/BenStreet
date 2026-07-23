@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {useState, useEffect} from 'react'
+import { SERVER_URL_BASE } from '../lib/config';
 
 function Activity() {
     const [activity, setActivity] = useState([]);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:3001/api/activity")
+        fetch(`${SERVER_URL_BASE}/api/activity`)
             .then((res) => {
                 if (!res.ok) {
                     throw new Error("Failed to fetch activity");
